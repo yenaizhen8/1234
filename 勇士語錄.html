@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Golden State Warriors Quotes</title>
+    <style>
+        body {
+            font-family: Arial;
+            text-align: center;
+            padding-top: 60px;
+            color: white;
+
+            background-color: #006BB6;
+            height: 100vh;
+        }
+
+        #quote {
+            font-size: 26px;
+            margin-top: 40px;
+            background: rgba(0,0,0,0.45);
+            padding: 20px;
+            border-radius: 8px;
+            display: inline-block;
+            max-width: 80%;
+        }
+
+        button {
+            font-size: 18px;
+            padding: 10px 25px;
+            cursor: pointer;
+            background: #FDB927; /* 勇士金色 */
+            border: none;
+            border-radius: 6px;
+        }
+
+        button:hover {
+            background: #FFCA3A;
+        }
+
+        h1 {
+            text-shadow: 0 0 10px #000;
+        }
+    </style>
+</head>
+<body>
+    <h1>🏀 Golden State Warriors 語錄</h1>
+    <button id="btn">抽一句勇士語錄</button>
+
+    <div id="quote">按按鈕抽一句</div>
+
+    <script>
+        const quotes = [
+            "Stephen Curry：保持信念，投不進也要敢投。",
+            "Stephen Curry：你不投，永遠命中不了。",
+            "Klay Thompson：我就是不停出手，因為下一球一定會進。",
+            "Klay Thompson：逆境只是看你有沒有準備好。",
+            "Draymond Green：防守是態度，不是天賦。",
+            "Chris Paul：你要當球隊想依賴的那個人。",
+            "Kevin Durant：努力不會騙人。",
+            "Jordan Poole：保持自信，球就會進。",
+            "Andre Iguodala：球場上要做對球隊最有利的選擇。",
+            "Andrew Wiggins：我做好我的角色，其他自然會跟上。",
+            "Harrison Barnes：成功來自於每天的小細節。",
+            "Shaun Livingston：專心完成你能控制的部分。",
+            "David West：冠軍不是靠天賦，是靠紀律。"
+        ];
+
+        const btn = document.getElementById("btn");
+        const quote = document.getElementById("quote");
+
+        btn.addEventListener("click", function() {
+            const randomIndex = Math.floor(Math.random() * quotes.length);
+            quote.innerText = quotes[randomIndex];
+        });
+    </script>
+</body>
+</html>
